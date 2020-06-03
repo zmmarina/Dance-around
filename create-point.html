@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a place</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    
+
+</head>
+<body>
+
+    <div id="page-create-point">
+       
+            <header>
+                <img src="/assets/logo.png" alt="Logo">
+                <a href="#">
+                    <span></span>
+                    Back to Home
+                </a>
+            </header>
+
+            <form action="">
+
+                <h1>Register your dance spot here</h1>
+
+                <fieldset>
+                    <legend>
+                        <h2>Entity data</h2>
+                    </legend>
+
+                    <div class="field">
+                        <label for="">Entity Name</label>
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="address">Address</label>
+                            <input type="text" name="address">
+                        </div>
+                        <div class="field">
+                            <label for="address2">Number/Complement</label>
+                            <input type="text" name="address2">
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">State</label>
+                            <select name="uf">
+                                <option value="">Select State</option>
+                            </select>
+
+                            <input type="hidden" name="state">
+                            
+                        </div>
+                        <div class="field">
+                            <label for="city">City</label>
+                            <select name="city" disabled>
+                                <option value="">Select City</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                </fieldset>
+
+               
+
+                <button type="submit">Register your dance spot!</button>
+
+
+            </form>
+        
+
+                 
+    </div>   
+
+    <script src="/scripts/create-point.js"></script>
+    
+</body>
+</html>
