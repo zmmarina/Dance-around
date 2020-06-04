@@ -20,7 +20,7 @@
        
             <header>
                 <img src="/assets/logo.png" alt="Logo">
-                <a href="#">
+                <a href="index.html">
                     <span></span>
                     Back to Home
                 </a>
@@ -37,24 +37,24 @@
 
                     <div class="field">
                         <label for="">Entity Name</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" required>
                     </div>
 
                     <div class="field-group">
                         <div class="field">
                             <label for="address">Address</label>
-                            <input type="text" name="address">
+                            <input type="text" name="address" required>
                         </div>
                         <div class="field">
                             <label for="address2">Number/Complement</label>
-                            <input type="text" name="address2">
+                            <input type="text" name="address2" required>
                         </div>
                     </div>
 
                     <div class="field-group">
                         <div class="field">
                             <label for="state">State</label>
-                            <select name="uf">
+                            <select name="uf" required>
                                 <option value="">Select State</option>
                             </select>
 
@@ -63,12 +63,54 @@
                         </div>
                         <div class="field">
                             <label for="city">City</label>
-                            <select name="city" disabled>
+                            <select name="city" disabled required>
                                 <option value="">Select City</option>
                             </select>
 
                         </div>
                     </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <h2>Which one defines better your dance spot?</h2>
+                    </legend>
+
+                    <div class="items-grid">
+                        <li data-id = "1">
+                            <img src="/assets/school.svg" alt="School">
+                            <spam>School</spam>
+                        </li>
+
+                        <li data-id = "2">
+                            <img src="/assets/store.svg" alt="Store">
+                            <spam>Store</spam>
+                        </li>
+
+                        <li data-id = "3">
+                            <img src="assets/tickets.svg" alt="Theater">
+                            <spam>Theater</spam>
+                        </li>
+
+                        <li data-id = "4">
+                            <img src="assets/group.svg" alt="Group">
+                            <spam>Group</spam>
+                        </li>
+
+                        <li data-id = "5">
+                            <img src="assets/syndicate.svg" alt="Syndicate">
+                            <spam>Syndicate</spam>
+                        </li>
+
+                        <li data-id = "6">
+                            <img src="assets/event.svg" alt="Event">
+                            <spam>Event</spam>
+                        </li>
+                    </div>
+
+                    <input type="hidden" name="options">
+
 
                 </fieldset>
 

@@ -26,12 +26,15 @@ function getCities(event){
 
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`;
 
+    citySelect.innerHTML = "<option value>Select city</option>";
+    citySelect.disabled = true;
+
     fetch(url)
     .then( res => res.json())
     .then( cities => {
 
         for (const city of cities){
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`;
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`;
         }
 
         citySelect.disabled = false;
@@ -42,3 +45,40 @@ document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities);
 
+
+//Classifying dance spot
+const optionsToClassify = document.querySelectorAll(".items-grid li");
+
+for (const option of optionsToClassify){
+    option.addEventListener("click", handleSelectedOption);
+}
+
+const collectedOptions =  document.querySelector("input[name=options]");
+let selectedOptions = [];
+
+function handleSelectedOption(event){
+    const optionLi = event.target;
+
+    optionLi.classList.toggle("selected");
+
+    const optionId = optionLi.dataset.id;
+
+    const alreadySelected = selectedOptions.findIndex(option => {
+        return option == optionId;
+    });
+
+    if (alreadySelected >= 0){
+        const filteredOptions = selectedOptions.filter(option => {
+            const optionIsDifferent = option != optionId;
+            return optionIsDifferent;
+        });
+
+        selectedOptions = filteredOptions;
+
+    }else{
+        selectedOptions.push(optionId);
+    }
+
+   collectedOptions.value = selectedOptions;
+
+}
