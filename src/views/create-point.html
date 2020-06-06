@@ -8,12 +8,13 @@
 
 {% block styles %}
     <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/modal.css">
 {% endblock styles %}
 
 {% block content %}
     {% include "partials/page-header.html" %}
 
-    <form action="">
+    <form action="/savepoint" method= "POST">
 
         <h1>Register your dance spot here</h1>
 
@@ -72,32 +73,32 @@
             </legend>
 
             <div class="items-grid">
-                <li data-id="1">
+                <li data-id="School">
                     <img src="/assets/school.svg" alt="School">
                     <spam>School</spam>
                 </li>
 
-                <li data-id="2">
+                <li data-id="Store">
                     <img src="/assets/store.svg" alt="Store">
                     <spam>Store</spam>
                 </li>
 
-                <li data-id="3">
+                <li data-id="Theater">
                     <img src="assets/tickets.svg" alt="Theater">
                     <spam>Theater</spam>
                 </li>
 
-                <li data-id="4">
+                <li data-id="Group">
                     <img src="assets/group.svg" alt="Group">
                     <spam>Group</spam>
                 </li>
 
-                <li data-id="5">
+                <li data-id="Syndicate">
                     <img src="assets/syndicate.svg" alt="Syndicate">
                     <spam>Syndicate</spam>
                 </li>
 
-                <li data-id="6">
+                <li data-id="Event">
                     <img src="assets/event.svg" alt="Event">
                     <spam>Event</spam>
                 </li>
@@ -109,8 +110,16 @@
 
         <button type="submit">Register your dance spot!</button>
 
-    </form>
+    </form>   
 {% endblock content %}
+
+
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
+
 
 {% block scripts %}
     <script src="/scripts/create-point.js"></script>
