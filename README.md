@@ -1,7 +1,7 @@
 <h1> New Level Week 1 -Rocketseat </h1>
 <h2> Dance Around </h2>
 <p> Project developed to follow the instructions given by Mayk Brito (Rocketseat) during the New Level Week.</p>
-<p> It consumes date from API: https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/distritos and https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios </p>
+<p> It consumes data from API: https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/distritos and https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios </p>
                                 
 
 <h3> Technologies </h3>
