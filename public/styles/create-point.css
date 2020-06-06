@@ -68,6 +68,12 @@ form legend h2{
     font-size: 24px;
 }
 
+form legend span{
+    color: var(--title-color);
+    font-size: 14px;
+
+}
+
 form .field{
 
     flex: 1;

@@ -3,7 +3,7 @@ body::after{
     content: " ";
     position: fixed;
     background: white;
-    top: 300px;
+    top: 290px;
     right: 0;
     left: 0;
     bottom: 0;

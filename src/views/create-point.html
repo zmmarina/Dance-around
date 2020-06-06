@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-create-point" %}
+
+{% block title %}
+    <title>Create a place</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/create-point.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+
+    <form action="">
+
+        <h1>Register your dance spot here</h1>
+
+        <fieldset>
+            <legend>
+                <h2>Entity data</h2>
+            </legend>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="">Entity Name</label>
+                    <input type="text" name="name" required="required">
+                </div>
+                <div class="field">
+                    <label for="">Image</label>
+                    <input type="url" name="image" placeholder= "http://" required="required">
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" required="required">
+                </div>
+                <div class="field">
+                    <label for="address2">Number/Complement</label>
+                    <input type="text" name="address2" required="required">
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="state">State</label>
+                    <select name="uf" required="required">
+                        <option value="">Select State</option>
+                    </select>
+
+                    <input type="hidden" name="state">
+
+                </div>
+                <div class="field">
+                    <label for="city">City</label>
+                    <select name="city" disabled="disabled" required="required">
+                        <option value="">Select City</option>
+                    </select>
+
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <h2>Which one better defines your dance spot?</h2>
+                <span>Select one or more options below</span>
+            </legend>
+
+            <div class="items-grid">
+                <li data-id="1">
+                    <img src="/assets/school.svg" alt="School">
+                    <spam>School</spam>
+                </li>
+
+                <li data-id="2">
+                    <img src="/assets/store.svg" alt="Store">
+                    <spam>Store</spam>
+                </li>
+
+                <li data-id="3">
+                    <img src="assets/tickets.svg" alt="Theater">
+                    <spam>Theater</spam>
+                </li>
+
+                <li data-id="4">
+                    <img src="assets/group.svg" alt="Group">
+                    <spam>Group</spam>
+                </li>
+
+                <li data-id="5">
+                    <img src="assets/syndicate.svg" alt="Syndicate">
+                    <spam>Syndicate</spam>
+                </li>
+
+                <li data-id="6">
+                    <img src="assets/event.svg" alt="Event">
+                    <spam>Event</spam>
+                </li>
+            </div>
+
+            <input type="hidden" name="options">
+
+        </fieldset>
+
+        <button type="submit">Register your dance spot!</button>
+
+    </form>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/scripts/create-point.js"></script>
+{% endblock scripts %}

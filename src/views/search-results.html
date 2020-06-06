@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-search-results" %}
+
+{% block title %}
+    <title>Search results</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+
+    <main>
+
+        <h4>
+            <strong>2 spots</strong>
+            found
+        </h4>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1558905566-ddbeb2fc2c2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80" alt="Royal Ballet School">
+                <h1>Royal Ballet School</h1>
+                <h3>School</h3>
+                <p>
+                    London, UK
+                    <br/>
+                    46 Floral St., Convent Garden
+                    <br/>
+                    n. 4556
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1466554934129-f71df54ebb27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Dance Zone Hip Hop">
+                <h1>Dance Zone Hip Hop</h1>
+                <h3>Group</h3>
+                <p>
+                    Dublin, IE
+                    <br/>
+                    14 Cornmarket St., Dublin 8
+                    <br/>
+                    n. 1602
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+{% endblock content %}

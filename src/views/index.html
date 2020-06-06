@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{% block styles %}
+        <link rel="stylesheet" href="/styles/home.css">
+        <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{% block content %}
+    <div class="content">
+
+    <header>
+        <img src="/assets/logo.png" alt="Logo">
+        <a href="/create-point">
+            <span></span>
+            Register your dance spot
+        </a>
+    </header>
+
+    <main>
+    
+        <h1>Everything related to dance in one site!</h1>
+    
+        <p>We help people to find whatever they need when the subject is dance.</p>
+
+        <a href="#"> <span></span> <strong>Find all dance near you</strong></a>           
+            
+                
+    </main>
+    </div>
+{% endblock content %}  
+
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/index.js"></script>   
+{% endblock scripts %}
+ 
+
+
+
