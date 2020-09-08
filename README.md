@@ -1,6 +1,6 @@
-<h1> New Level Week 1 -Rocketseat </h1>
-<h2> Dance Around </h2>
-<p> Project developed to follow the instructions given by Mayk Brito (Rocketseat) during the New Level Week.</p>
+<h1> Dance Arond </h1>
+
+<p> Project developed during the New Level Week. I thought and developed this idea to help people who love dancing to get connected!</p>
 <p> It consumes data from API: https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/distritos and https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios </p>
                                 
 
